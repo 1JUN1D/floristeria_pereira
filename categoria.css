@@ -1,0 +1,363 @@
+/* 
+ * Larosset - Bucaramanga
+ * Service/Category page specific styles
+ * Paleta de colores:
+ * Primary:    #BF9460 (Dorado cálido)
+ * Secondary:  #F2CEA2 (Crema suave)
+ * Accent:     #8C5F37 (Marrón elegante)
+ * Highlight:  #F2C9C9 (Rosa pálido)
+ * Background: #F2F2F2 (Gris claro)
+ */
+
+:root {
+    --primary: #BF9460;
+    --secondary: #F2CEA2;
+    --accent: #8C5F37;
+    --highlight: #F2C9C9;
+    --background: #F2F2F2;
+    --text-dark: #333;
+    --text-light: #555;
+    --white: #fff;
+}
+
+/* Category Hero Section */
+.category-hero {
+    height: 50vh;
+    background: linear-gradient(135deg, rgba(140, 95, 55, 0.9), rgba(191, 148, 96, 0.7)), url('assets/flores_bucaramanga_1.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 0px;
+}
+
+.category-hero-content h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.category-hero-content p {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Service page specific styles */
+.service-hero {
+    height: 50vh;
+    background: linear-gradient(135deg, rgba(140, 95, 55, 0.9), rgba(191, 148, 96, 0.7)), url('assets/flores_bucaramanga_1.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.service-hero-content h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.service-content {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--white), var(--background));
+}
+
+.content-section {
+    margin-bottom: 3rem;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.benefits-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.benefit-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(140, 95, 55, 0.1);
+    border-left: 4px solid var(--primary);
+}
+
+.benefit-item h3 {
+    color: var(--accent);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.pricing-section {
+    background: rgba(191, 148, 96, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.price-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(140, 95, 55, 0.1);
+}
+
+.price-item h4 {
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.price {
+    color: var(--primary);
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.areas-section {
+    background: rgba(140, 95, 55, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.area-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--accent);
+}
+
+.cta-section {
+    background: linear-gradient(135deg, var(--accent), #a57244);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.cta-section h2 {
+    color: var(--secondary);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-button-large {
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    color: var(--accent);
+    border: none;
+    padding: 18px 50px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(191, 148, 96, 0.3);
+}
+
+.cta-button-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(191, 148, 96, 0.4);
+}
+
+.breadcrumb {
+    background: rgba(140, 95, 55, 0.05);
+    padding: 15px 0;
+    margin-top: 80px;
+}
+
+.breadcrumb-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-nav a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.breadcrumb-nav a:hover {
+    color: var(--primary);
+}
+
+.breadcrumb-nav span {
+    color: #666;
+}
+
+/* Service Areas Section for category pages */
+.service-areas {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--highlight), var(--white));
+}
+
+.service-areas .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--accent);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.service-areas .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--primary));
+}
+
+.service-areas .areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.area-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(140, 95, 55, 0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.area-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(140, 95, 55, 0.15);
+}
+
+.area-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.area-description {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .category-hero,
+    .service-hero {
+        height: 40vh;
+        margin-top: 0px;
+    }
+    
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .content-section p {
+        font-size: 1rem;
+    }
+    
+    .benefits-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-section p {
+        font-size: 1rem;
+    }
+
+    .breadcrumb {
+        margin-top: 70px;
+    }
+
+    .service-areas .areas-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-areas .areas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-hero-content h1 {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Flores - SanJose Florería Pereira | Ramos y Bouquets</title>
+    <meta name="description" content="Catálogo completo de ramos y bouquets de SanJose Florería en Pereira. Rosas, girasoles, gerberas y arreglos florales con entrega a domicilio en Pereira.">
+    <link rel="shortcut icon" href="/assets/logo.webp" type="image/x-icon">
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1072535878345850');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1072535878345850&ev=PageView&noscript=1" /></noscript>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LS1WV5B608"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-LS1WV5B608');
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17503274952"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-17503274952');
+    </script>
+
+    <!-- FUNCIÓN DE TRACKING WHATSAPP PARA GOOGLE ADS -->
+    <script>
+        function trackWhatsAppLead(whatsappUrl, eventLabel) {
+            try {
+                gtag('event', 'whatsapp_click', {
+                    'event_category': 'engagement',
+                    'event_label': eventLabel,
+                    'page_location': window.location.href
+                });
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17503274952/lA9PCODAu4wbEMiPm5pB',
+                    'event_callback': function() {
+                        window.open(whatsappUrl, '_blank');
+                    }
+                });
+                setTimeout(function() { window.open(whatsappUrl, '_blank'); }, 300);
+            } catch (error) {
+                console.error('Error en tracking:', error);
+                window.open(whatsappUrl, '_blank');
+            }
+            return false;
+        }
+    </script>
+
+    <link rel="stylesheet" href="catalogo.css">
+
+    <style>
+        /* ── Zoom hint ─────────────────────────────────────── */
+        .product-image {
+            position: relative;
+            overflow: hidden;
+        }
+        .zoom-hint {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background: rgba(0,0,0,0.55);
+            color: #fff;
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+        .product-image:hover .zoom-hint {
+            opacity: 1;
+        }
+        .product-image:hover img {
+            transform: scale(1.04);
+            transition: transform 0.35s ease;
+        }
+        .product-image img {
+            transition: transform 0.35s ease;
+        }
+
+        /* ── Lightbox ───────────────────────────────────────── */
+        #lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.88);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        #lightbox.active {
+            display: flex;
+        }
+        #lightbox img {
+            max-width: min(92vw, 580px);
+            max-height: 78vh;
+            border-radius: 12px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+            object-fit: contain;
+            animation: lbFadeIn 0.28s ease;
+        }
+        @keyframes lbFadeIn {
+            from { opacity:0; transform: scale(0.92); }
+            to   { opacity:1; transform: scale(1); }
+        }
+        #lightbox-caption {
+            color: #fff;
+            font-size: 15px;
+            margin-top: 14px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            text-align: center;
+        }
+        #lightbox-close {
+            position: absolute;
+            top: 18px;
+            right: 22px;
+            background: rgba(255,255,255,0.15);
+            border: none;
+            color: #fff;
+            font-size: 26px;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+        #lightbox-close:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        #lightbox-overlay {
+            position: absolute;
+            inset: 0;
+            cursor: zoom-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox">
+        <div id="lightbox-overlay" onclick="closeLightbox()"></div>
+        <button id="lightbox-close" onclick="closeLightbox()" title="Cerrar">&#x2715;</button>
+        <img id="lightbox-img" src="" alt="">
+        <p id="lightbox-caption"></p>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo.webp" alt="SanJose Florería Logo">
+            </div>
+            <h1>Nuestro Catálogo</h1>
+            <p>Ramos y bouquets únicos para cada ocasión especial en Pereira</p>
+            <div class="decorative-line"></div>
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">Todos</button>
+                <button class="filter-btn" data-category="rosas">Rosas</button>
+                <button class="filter-btn" data-category="girasoles">Girasoles</button>
+                <button class="filter-btn" data-category="gerberas">Gerberas</button>
+                <button class="filter-btn" data-category="especiales">Especiales</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="catalog">
+        <div class="container">
+            <div class="products-grid">
+
+                <!-- Tarjeta: Ramo Personalizado -->
+                <div class="product-card personalizado-card" data-category="all" style="background: linear-gradient(145deg, #fff5f7 0%, #fff 100%); border: 2px solid #f0a0b0; position: relative; overflow: hidden;">
+                    <div class="category-badge" style="background: linear-gradient(135deg, #e8396a, #c0135a);">✨ Exclusivo</div>
+                    <div class="product-image" onclick="openLightbox('assets/flores.webp', 'Ramo Personalizado')" style="cursor:zoom-in;">
+                        <img src="assets/flores.webp" alt="Ramos personalizados Pereira - SanJose Florería" loading="eager">
+                        <div class="zoom-hint">🔍 Ver foto</div>
+                    </div>
+                    <div class="product-content">
+                        <h2 class="product-title" style="color: #c0135a;">🌸 Hacemos tu Ramo Personalizado</h2>
+                        <p class="product-description">¿Tienes una idea especial en mente? Diseñamos el arreglo floral perfecto según tus flores favoritas, colores, presupuesto y ocasión. Cada ramo es una creación única hecha con amor solo para ti.</p>
+                        <div class="product-price" style="color: #c0135a;">¡Cotiza Ahora!</div>
+                        <button class="product-button" style="background: linear-gradient(135deg, #e8396a, #c0135a); font-size: 15px;"
+                            onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola, quiero cotizar un ramo personalizado. ¿Me pueden ayudar?', 'ramo_personalizado')">
+                            💬 Cotizar Ahora
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto: Corazón Vibrante -->
+                <div class="product-card" data-category="gerberas">
+                    <div class="category-badge">Gerberas</div>
+                    <div class="product-image" onclick="openLightbox('assets/flores_pereira_1.webp', 'Corazón Vibrante')" style="cursor:zoom-in;">
+                        <img src="assets/flores_pereira_1.webp" alt="Corazón Vibrante" loading="lazy">
+                        <div class="zoom-hint">🔍 Ver foto</div>
+                    </div>
+                    <div class="product-content">
+                        <h2 class="product-title">Corazón Vibrante</h2>
+                        <p class="product-description">Corazón espectacular con 40 gerberas multicolor. Diseño que desborda alegría y buenos deseos en forma que simboliza amor puro. Perfecto para sorprender con energía positiva natural.</p>
+                        <div class="product-price">$175,000</div>
+                        <button class="product-button"
+                            onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola, me interesa Corazón Vibrante por $175,000. ¿Podrías darme más información?', 'corazon_vibrante')">
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+                <!-- Producto: Sol Imperial -->
+                <div class="product-card" data-category="girasoles">
+                    <div class="category-badge">Girasoles</div>
+                    <div class="product-image" onclick="openLightbox('assets/flores_pereira_2.webp', 'Sol Imperial')" style="cursor:zoom-in;">
+                        <img src="assets/flores_pereira_2.webp" alt="Sol Imperial" loading="lazy">
+                        <div class="zoom-hint">🔍 Ver foto</div>
+                    </div>
+                    <div class="product-content">
+                        <h2 class="product-title">Sol Imperial</h2>
+                        <p class="product-description">Arreglo majestuoso con 4 girasoles, 20 rosas, 5 baritas decorativas, papel coreano y moño satinado. Fusiona luz solar con elegancia romántica en presentación que ilumina corazones eternamente.</p>
+                        <div class="product-price">$137,500</div>
+                        <button class="product-button"
+                            onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola, me interesa Sol Imperial por $137,500. ¿Podrías darme más información?', 'sol_imperial')">
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+                <!-- Producto: Constelación Dorada -->
+                <div class="product-card" data-category="girasoles">
+                    <div class="category-badge">Girasoles</div>
+                    <div class="product-image" onclick="openLightbox('assets/flores_pereira_3.webp', 'Constelación Dorada')" style="cursor:zoom-in;">
+                        <img src="assets/flores_pereira_3.webp" alt="Constelación Dorada" loading="lazy">
+                        <div class="zoom-hint">🔍 Ver foto</div>
+                    </div>
+                    <div class="product-content">
+                        <h2 class="product-title">Constelación Dorada</h2>
+                        <p class="product-description">Bouquet abundante con 6 girasoles, 48 rosas, dos especies de follajes, papel coreano y moño en cinta satín. Diseño que combina fuerza solar con pasión desbordante siempre.</p>
+                        <div class="product-price">$225,000</div>
+                        <button class="product-button"
+                            onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola, me interesa Constelación Dorada por $225,000. ¿Podrías darme más información?', 'constelacion_dorada')">
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+                <!-- Producto: Jardín de los Tres -->
+                <div class="product-card" data-category="rosas">
+                    <div class="category-badge">Rosas</div>
+                    <div class="product-image" onclick="openLightbox('assets/flores_pereira_4.webp', 'Jardín de los Tres')" style="cursor:zoom-in;">
+                        <img src="assets/flores_pereira_4.webp" alt="Jardín de los Tres" loading="lazy">
+                        <div class="zoom-hint">🔍 Ver foto</div>
+                    </div>
+                    <div class="product-content">
+                        <h2 class="product-title">Jardín de los Tres</h2>
+                        <p class="product-description">Ramo premium con 40 rosas, 6 lirios, 6 astromelias, follaje decorativo, papel coreano y moño. Fusión perfecta de tres bellezas florales que transmiten amor completo y refinado.</p>
+                        <div class="product-price">$212,500</div>
+                        <button class="product-button"
+                            onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola, me interesa Jardín de los Tres por $212,500. ¿Podrías darme más información?', 'jardin_de_los_tres')">
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+                <!-- Producto: Primavera Completa -->
+                <div class="product-card" data-category="especiales">
+                    <div class="category-badge">Especiales</div>
+                    <div class="product-image" onclick="openLightbox('assets/flores_pereira_5.webp', 'Primavera Completa')" style="cursor:zoom-in;">
+                        <img src="assets/flores_pereira_5.webp" alt="Primavera Completa" loading="lazy">
+                        <div class="zoom-hint">🔍 Ver foto</div>
+                    </div>
+                    <div class="product-content">
+                        <h2 class="product-title">Primavera Completa</h2>
+                        <p class="product-description">Arreglo variado con 8 rosas, 3 gerberas, 4 crisantemos, margaritas y follajes. Jardín diverso en presentación que celebra vida, alegría y belleza natural en máxima expresión.</p>
+                        <div class="product-price">$93,750</div>
+                        <button class="product-button"
+                            onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola, me interesa Primavera Completa por $93,750. ¿Podrías darme más información?', 'primavera_completa')">
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+                <!-- Producto: Arcoíris Natural -->
+                <div class="product-card" data-category="especiales">
+                    <div class="category-badge">Especiales</div>
+                    <div class="product-image" onclick="openLightbox('assets/flores_pereira_6.webp', 'Arcoíris Natural')" style="cursor:zoom-in;">
+                        <img src="assets/flores_pereira_6.webp" alt="Arcoíris Natural" loading="lazy">
+                        <div class="zoom-hint">🔍 Ver foto</div>
+                    </div>
+                    <div class="product-content">
+                        <h2 class="product-title">Arcoíris Natural</h2>
+                        <p class="product-description">Bouquet encantador con 6 rosas de colores, 1 lirio, 6 claveles y follaje decorativo. Transmite alegría multicolor y buenos deseos en armonía perfecta que conquista corazones siempre.</p>
+                        <div class="product-price">$87,500</div>
+                        <button class="product-button"
+                            onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola, me interesa Arcoíris Natural por $87,500. ¿Podrías darme más información?', 'arcoiris_natural')">
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+                <!-- Producto: Trío de Ternura -->
+                <div class="product-card" data-category="rosas">
+                    <div class="category-badge">Rosas</div>
+                    <div class="product-image" onclick="openLightbox('assets/flores_pereira_8.webp', 'Trío de Ternura')" style="cursor:zoom-in;">
+                        <img src="assets/flores_pereira_8.webp" alt="Trío de Ternura" loading="lazy">
+                        <div class="zoom-hint">🔍 Ver foto</div>
+                    </div>
+                    <div class="product-content">
+                        <h2 class="product-title">Trío de Ternura</h2>
+                        <p class="product-description">Ramo delicado con 3 rosas y variedad de follajes decorativos. Detalle sencillo pero significativo que expresa cariño sincero con elegancia natural minimalista siempre encantadora.</p>
+                        <div class="product-price">$60,000</div>
+                        <button class="product-button"
+                            onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola, me interesa Trío de Ternura por $60,000. ¿Podrías darme más información?', 'trio_de_ternura')">
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+                <!-- Producto: Quinteto Clásico -->
+                <div class="product-card" data-category="rosas">
+                    <div class="category-badge">Rosas</div>
+                    <div class="product-image" onclick="openLightbox('assets/flores_pereira_9.webp', 'Quinteto Clásico')" style="cursor:zoom-in;">
+                        <img src="assets/flores_pereira_9.webp" alt="Quinteto Clásico" loading="lazy">
+                        <div class="zoom-hint">🔍 Ver foto</div>
+                    </div>
+                    <div class="product-content">
+                        <h2 class="product-title">Quinteto Clásico</h2>
+                        <p class="product-description">Bouquet tradicional con 5 rosas, follaje y decoración elegante. Perfecto para gestos espontáneos que transmiten amor puro sin excesos pero con máximo significado emocional profundo.</p>
+                        <div class="product-price">$75,000</div>
+                        <button class="product-button"
+                            onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola, me interesa Quinteto Clásico por $75,000. ¿Podrías darme más información?', 'quinteto_clasico')">
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+                <!-- Producto: Dúo Floral -->
+                <div class="product-card" data-category="rosas">
+                    <div class="category-badge">Rosas</div>
+                    <div class="product-image" onclick="openLightbox('assets/flores_pereira_10.webp', 'Dúo Floral')" style="cursor:zoom-in;">
+                        <img src="assets/flores_pereira_10.webp" alt="Dúo Floral" loading="lazy">
+                        <div class="zoom-hint">🔍 Ver foto</div>
+                    </div>
+                    <div class="product-content">
+                        <h2 class="product-title">Dúo Floral</h2>
+                        <p class="product-description">Ramo armonioso con 5 rosas, dos astromelias, follaje y decoración. Combina romance con delicadeza en presentación equilibrada que transmite sentimientos sinceros y auténticos siempre.</p>
+                        <div class="product-price">$87,500</div>
+                        <button class="product-button"
+                            onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola, me interesa Dúo Floral por $87,500. ¿Podrías darme más información?', 'duo_floral')">
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+                <!-- Producto: Dulce Distinción -->
+                <div class="product-card" data-category="especiales">
+                    <div class="category-badge">Especiales</div>
+                    <div class="product-image" onclick="openLightbox('assets/flores_pereira_11.webp', 'Dulce Distinción')" style="cursor:zoom-in;">
+                        <img src="assets/flores_pereira_11.webp" alt="Dulce Distinción" loading="lazy">
+                        <div class="zoom-hint">🔍 Ver foto</div>
+                    </div>
+                    <div class="product-content">
+                        <h2 class="product-title">Dulce Distinción</h2>
+                        <p class="product-description">Arreglo romántico con 6 rosas, follaje, 3 chocolates Ferrero y decoración. La combinación perfecta entre belleza natural y sabor exquisito que conquista corazón y paladar simultáneamente.</p>
+                        <div class="product-price">$106,250</div>
+                        <button class="product-button"
+                            onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola, me interesa Dulce Distinción por $106,250. ¿Podrías darme más información?', 'dulce_distincion')">
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+                <!-- Producto: Pasión Gourmet Premium -->
+                <div class="product-card" data-category="especiales">
+                    <div class="category-badge">Especiales</div>
+                    <div class="product-image" onclick="openLightbox('assets/flores_pereira_12.webp', 'Pasión Gourmet Premium')" style="cursor:zoom-in;">
+                        <img src="assets/flores_pereira_12.webp" alt="Pasión Gourmet Premium" loading="lazy">
+                        <div class="zoom-hint">🔍 Ver foto</div>
+                    </div>
+                    <div class="product-content">
+                        <h2 class="product-title">Pasión Gourmet Premium</h2>
+                        <p class="product-description">Bouquet especial con 14 rosas, follaje, 4 chocolates Ferrero y decoración elegante. Transmite amor refinado con toque dulce que hace la diferencia en momentos especiales.</p>
+                        <div class="product-price">$125,000</div>
+                        <button class="product-button"
+                            onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola, me interesa Pasión Gourmet Premium por $125,000. ¿Podrías darme más información?', 'pasion_gourmet_premium')">
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+                <!-- Producto: Explosión Solar -->
+                <div class="product-card" data-category="girasoles">
+                    <div class="category-badge">Girasoles</div>
+                    <div class="product-image" onclick="openLightbox('assets/flores_pereira_13.webp', 'Explosión Solar')" style="cursor:zoom-in;">
+                        <img src="assets/flores_pereira_13.webp" alt="Explosión Solar" loading="lazy">
+                        <div class="zoom-hint">🔍 Ver foto</div>
+                    </div>
+                    <div class="product-content">
+                        <h2 class="product-title">Explosión Solar</h2>
+                        <p class="product-description">Arreglo espectacular con 23 girasoles, 20 claveles, follaje y decoración abundante. Diseño que desborda luz, alegría y energía positiva en presentación de máximo impacto visual memorable.</p>
+                        <div class="product-price">$250,000</div>
+                        <button class="product-button"
+                            onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola, me interesa Explosión Solar por $250,000. ¿Podrías darme más información?', 'explosion_solar')">
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+                <!-- Producto: Centenario de Pasión -->
+                <div class="product-card" data-category="rosas">
+                    <div class="category-badge">Rosas</div>
+                    <div class="product-image" onclick="openLightbox('assets/flores_pereira_14.webp', 'Centenario de Pasión')" style="cursor:zoom-in;">
+                        <img src="assets/flores_pereira_14.webp" alt="Centenario de Pasión" loading="lazy">
+                        <div class="zoom-hint">🔍 Ver foto</div>
+                    </div>
+                    <div class="product-content">
+                        <h2 class="product-title">Centenario de Pasión</h2>
+                        <p class="product-description">Ramo monumental de 100 rosas con follaje y decoración premium. Representa amor grande, intenso y sin límites en presentación que deja huella imborrable en el alma eternamente.</p>
+                        <div class="product-price">$387,500</div>
+                        <button class="product-button"
+                            onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola, me interesa Centenario de Pasión por $387,500. ¿Podrías darme más información?', 'centenario_de_pasion')">
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+                <!-- Producto: Cien Razones -->
+                <div class="product-card" data-category="rosas">
+                    <div class="category-badge">Rosas</div>
+                    <div class="product-image" onclick="openLightbox('assets/flores_pereira_15.webp', 'Cien Razones')" style="cursor:zoom-in;">
+                        <img src="assets/flores_pereira_15.webp" alt="Cien Razones" loading="lazy">
+                        <div class="zoom-hint">🔍 Ver foto</div>
+                    </div>
+                    <div class="product-content">
+                        <h2 class="product-title">Cien Razones</h2>
+                        <p class="product-description">Bouquet majestuoso con 100 rosas, follaje y decoración sofisticada. Cada rosa simboliza una razón para amar en arreglo que transmite sentimientos supremos con belleza natural absoluta.</p>
+                        <div class="product-price">$387,500</div>
+                        <button class="product-button"
+                            onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola, me interesa Cien Razones por $387,500. ¿Podrías darme más información?', 'cien_razones')">
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+                <!-- Producto: Dualidad Imperial -->
+                <div class="product-card" data-category="rosas">
+                    <div class="category-badge">Rosas</div>
+                    <div class="product-image" onclick="openLightbox('assets/flores_pereira_16.webp', 'Dualidad Imperial')" style="cursor:zoom-in;">
+                        <img src="assets/flores_pereira_16.webp" alt="Dualidad Imperial" loading="lazy">
+                        <div class="zoom-hint">🔍 Ver foto</div>
+                    </div>
+                    <div class="product-content">
+                        <h2 class="product-title">Dualidad Imperial</h2>
+                        <p class="product-description">Ramo espectacular de 120 rosas en dos colores con follaje y decoración. Diseño que fusiona tonalidades complementarias en presentación de máxima elegancia y distinción natural memorable.</p>
+                        <div class="product-price">$425,000</div>
+                        <button class="product-button"
+                            onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola, me interesa Dualidad Imperial por $425,000. ¿Podrías darme más información?', 'dualidad_imperial')">
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+                <!-- Producto: Corona de Pasión -->
+                <div class="product-card" data-category="rosas">
+                    <div class="category-badge">Rosas</div>
+                    <div class="product-image" onclick="openLightbox('assets/flores_pereira_17.webp', 'Corona de Pasión')" style="cursor:zoom-in;">
+                        <img src="assets/flores_pereira_17.webp" alt="Corona de Pasión" loading="lazy">
+                        <div class="zoom-hint">🔍 Ver foto</div>
+                    </div>
+                    <div class="product-content">
+                        <h2 class="product-title">Corona de Pasión</h2>
+                        <p class="product-description">Arreglo premium con 80 rosas en dos colores, corona decorativa y presentación espectacular. Simboliza amor que reina supremo con elegancia natural que conquista desde primer vistazo.</p>
+                        <div class="product-price">$425,000</div>
+                        <button class="product-button"
+                            onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola, me interesa Corona de Pasión por $425,000. ¿Podrías darme más información?', 'corona_de_pasion')">
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="#" onclick="return trackWhatsAppLead('https://wa.me/573207544126', 'floating_button_catalogo')">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.531 3.488"/>
+            </svg>
+        </a>
+    </div>
+
+    <script>
+        // ── Lightbox ────────────────────────────────────────────
+        function openLightbox(src, name) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-img').alt = name;
+            document.getElementById('lightbox-caption').textContent = name;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.getElementById('lightbox-img').src = '';
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // ── Filtros ─────────────────────────────────────────────
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-card');
+
+            function applyFilter(category) {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                const activeButton = document.querySelector(`[data-category="${category}"]`);
+                if (activeButton) activeButton.classList.add('active');
+
+                productCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.classList.remove('hidden');
+                        card.style.animation = 'none';
+                        card.offsetHeight;
+                        card.style.animation = 'fadeInUp 0.6s ease-out';
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+
+                const url = new URL(window.location);
+                if (category === 'all') {
+                    url.searchParams.delete('category');
+                } else {
+                    url.searchParams.set('category', category);
+                }
+                window.history.pushState({}, '', url);
+            }
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    applyFilter(this.getAttribute('data-category'));
+                });
+            });
+
+            const categoryFromURL = new URLSearchParams(window.location.search).get('category');
+            if (categoryFromURL) {
+                applyFilter(categoryFromURL);
+            }
+        });
+    </script>
+
+</body>
+</html>
