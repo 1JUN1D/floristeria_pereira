@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramos de Rosas en Pereira | Envío a Domicilio</title>
+    <meta name="description" content="Compra ramos de rosas en Pereira con envío a domicilio. Bouquets de rosas rojas, rosas negras, ramos buchones y cajas de rosas. SanJose Florería Pereira.">
+    <link rel="shortcut icon" href="/assets/logo.webp" type="image/x-icon">
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+        (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init','1072535878345850');
+        fbq('track','PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1072535878345850&ev=PageView&noscript=1"/></noscript>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HV3B0TES2"></script>
+    <script>
+        window.dataLayer=window.dataLayer||[];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js',new Date());
+        gtag('config','G-2HV3B0TES2');
+    </script>
+
+
+
+    <!-- Google Ads Conversion Tracking (ID: AW-17976418670) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17976418670"></script>
+    <script>
+        window.dataLayer=window.dataLayer||[];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js',new Date());
+        gtag('config','AW-17976418670');
+    </script>
+
+    <!-- Conversion Linker (se activa en todas las páginas) -->
+    <script>
+        gtag('set','linker',{'accept_incoming':true});
+    </script>
+
+    <!-- FUNCIÓN DE TRACKING WHATSAPP CON CONVERSIÓN GOOGLE ADS -->
+    <script>
+        function trackWhatsAppLead(whatsappUrl, eventLabel) {
+            try {
+                // GA4 Event
+                gtag('event','whatsapp_click',{
+                    'event_category':'engagement',
+                    'event_label':eventLabel,
+                    'page_location':window.location.href
+                });
+                // Google Ads Conversion: Contacto_WhatsApp (Label: KhwvCK_P5P4bEO7C6ftC)
+                gtag('event','conversion',{
+                    'send_to':'AW-17976418670/KhwvCK_P5P4bEO7C6ftC',
+                    'event_callback':function(){
+                        window.open(whatsappUrl,'_blank');
+                    }
+                });
+                // Facebook Pixel
+                if(typeof fbq==='function'){
+                    fbq('track','Contact',{'content_name':eventLabel});
+                }
+                setTimeout(function(){window.open(whatsappUrl,'_blank');},300);
+            } catch(error) {
+                console.error('Error en tracking:',error);
+                window.open(whatsappUrl,'_blank');
+            }
+            return false;
+        }
+    </script>
+
+    <link rel="stylesheet" href="landing-template.css">
+</head>
+<body>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox">
+        <div id="lightbox-overlay" onclick="closeLightbox()"></div>
+        <button id="lightbox-close" onclick="closeLightbox()" title="Cerrar">&#x2715;</button>
+        <img id="lightbox-img" src="" alt="">
+        <p id="lightbox-caption"></p>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo.webp" alt="SanJose Florería Pereira">
+            </div>
+            <h1>Ramos de Rosas en Pereira</h1>
+            <p class="subtitle">Bouquets de rosas rojas, cajas de rosas, ramos buchones y arreglos de rosas con envío a domicilio en Pereira</p>
+            <div class="decorative-line"></div>
+            <button class="cta-hero" onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20vi%20su%20página%20de%20ramos%20de%20rosas%20en%20Pereira%20y%20me%20interesa.%20%C2%BFMe%20pueden%20asesorar%3F','hero_rosas')">
+                💬 Escríbenos por WhatsApp
+            </button>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🌹</div>
+                    <h3>Rosas Frescas</h3>
+                    <p>Rosas premium seleccionadas a mano</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🚚</div>
+                    <h3>Domicilio Gratis</h3>
+                    <p>Entrega en toda Pereira y alrededores</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">⏰</div>
+                    <h3>Mismo Día</h3>
+                    <p>Pide hoy y recibe hoy</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💝</div>
+                    <h3>Personalizable</h3>
+                    <p>Elige colores, cantidad y presentación</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="catalog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Ramos de Rosas</h2>
+                <p>Desde bouquets de 3 rosas hasta ramos monumentales de 120 rosas — elige el arreglo perfecto</p>
+            </div>
+            <div class="products-grid">
+            <div class="product-card personalizado-card">
+                <div class="category-badge">✨ Exclusivo</div>
+                <div class="product-image" onclick="openLightbox('assets/flores.webp','Ramo Personalizado')" style="cursor:zoom-in;">
+                    <img src="assets/flores.webp" alt="Ramos personalizados Pereira - SanJose Florería" loading="eager">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">🌸 Ramo Personalizado</h2>
+                    <p class="product-description">¿Tienes una idea especial en mente? Diseñamos el arreglo floral perfecto según tus flores favoritas, colores, presupuesto y ocasión. Cada ramo es una creación única hecha con amor solo para ti.</p>
+                    <div class="product-price">¡Cotiza Ahora!</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20quiero%20cotizar%20un%20ramo%20personalizado.%20%C2%BFMe%20pueden%20ayudar%3F','ramo_personalizado')">
+                        💬 Cotizar Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="category-badge">Rosas</div>
+                <div class="product-image" onclick="openLightbox('assets/flores_pereira_8.webp','Trío de Ternura')" style="cursor:zoom-in;">
+                    <img src="assets/flores_pereira_8.webp" alt="Trío de Ternura - Rosas" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Trío de Ternura</h2>
+                    <p class="product-description">Ramo delicado con 3 rosas y variedad de follajes decorativos. Detalle sencillo pero significativo que expresa cariño sincero con elegancia natural minimalista siempre encantadora.</p>
+                    <div class="product-price">$60,000</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Trío%20de%20Ternura%20por%20%2460%2C000.%20%C2%BFPodrías%20darme%20más%20información%3F','trio_de_ternura')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="category-badge">Rosas</div>
+                <div class="product-image" onclick="openLightbox('assets/flores_pereira_9.webp','Quinteto Clásico')" style="cursor:zoom-in;">
+                    <img src="assets/flores_pereira_9.webp" alt="Quinteto Clásico - Rosas" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Quinteto Clásico</h2>
+                    <p class="product-description">Bouquet tradicional con 5 rosas, follaje y decoración elegante. Perfecto para gestos espontáneos que transmiten amor puro sin excesos pero con máximo significado emocional profundo.</p>
+                    <div class="product-price">$75,000</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Quinteto%20Clásico%20por%20%2475%2C000.%20%C2%BFPodrías%20darme%20más%20información%3F','quinteto_clasico')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="category-badge">Rosas</div>
+                <div class="product-image" onclick="openLightbox('assets/flores_pereira_10.webp','Dúo Floral')" style="cursor:zoom-in;">
+                    <img src="assets/flores_pereira_10.webp" alt="Dúo Floral - Rosas y Astromelias" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Dúo Floral</h2>
+                    <p class="product-description">Ramo armonioso con 5 rosas, dos astromelias, follaje y decoración. Combina romance con delicadeza en presentación equilibrada que transmite sentimientos sinceros y auténticos siempre.</p>
+                    <div class="product-price">$87,500</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Dúo%20Floral%20por%20%2487%2C500.%20%C2%BFPodrías%20darme%20más%20información%3F','duo_floral')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="category-badge">Rosas</div>
+                <div class="product-image" onclick="openLightbox('assets/flores_pereira_4.webp','Jardín de los Tres')" style="cursor:zoom-in;">
+                    <img src="assets/flores_pereira_4.webp" alt="Jardín de los Tres - Rosas Lirios Astromelias" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Jardín de los Tres</h2>
+                    <p class="product-description">Ramo premium con 40 rosas, 6 lirios, 6 astromelias, follaje decorativo, papel coreano y moño. Fusión perfecta de tres bellezas florales que transmiten amor completo y refinado.</p>
+                    <div class="product-price">$212,500</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Jardín%20de%20los%20Tres%20por%20%24212%2C500.%20%C2%BFPodrías%20darme%20más%20información%3F','jardin_de_los_tres')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="category-badge">Rosas</div>
+                <div class="product-image" onclick="openLightbox('assets/flores_pereira_14.webp','Centenario de Pasión')" style="cursor:zoom-in;">
+                    <img src="assets/flores_pereira_14.webp" alt="Centenario de Pasión - 100 Rosas" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Centenario de Pasión</h2>
+                    <p class="product-description">Ramo monumental de 100 rosas con follaje y decoración premium. Representa amor grande, intenso y sin límites en presentación que deja huella imborrable en el alma eternamente.</p>
+                    <div class="product-price">$387,500</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Centenario%20de%20Pasión%20por%20%24387%2C500.%20%C2%BFPodrías%20darme%20más%20información%3F','centenario_de_pasion')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="category-badge">Rosas</div>
+                <div class="product-image" onclick="openLightbox('assets/flores_pereira_15.webp','Cien Razones')" style="cursor:zoom-in;">
+                    <img src="assets/flores_pereira_15.webp" alt="Cien Razones - 100 Rosas Bouquet" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Cien Razones</h2>
+                    <p class="product-description">Bouquet majestuoso con 100 rosas, follaje y decoración sofisticada. Cada rosa simboliza una razón para amar en arreglo que transmite sentimientos supremos con belleza natural absoluta.</p>
+                    <div class="product-price">$387,500</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Cien%20Razones%20por%20%24387%2C500.%20%C2%BFPodrías%20darme%20más%20información%3F','cien_razones')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="category-badge">Rosas</div>
+                <div class="product-image" onclick="openLightbox('assets/flores_pereira_16.webp','Dualidad Imperial')" style="cursor:zoom-in;">
+                    <img src="assets/flores_pereira_16.webp" alt="Dualidad Imperial - 120 Rosas Bicolor" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Dualidad Imperial</h2>
+                    <p class="product-description">Ramo espectacular de 120 rosas en dos colores con follaje y decoración. Diseño que fusiona tonalidades complementarias en presentación de máxima elegancia y distinción natural memorable.</p>
+                    <div class="product-price">$425,000</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Dualidad%20Imperial%20por%20%24425%2C000.%20%C2%BFPodrías%20darme%20más%20información%3F','dualidad_imperial')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="category-badge">Rosas</div>
+                <div class="product-image" onclick="openLightbox('assets/flores_pereira_17.webp','Corona de Pasión')" style="cursor:zoom-in;">
+                    <img src="assets/flores_pereira_17.webp" alt="Corona de Pasión - 80 Rosas Premium" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Corona de Pasión</h2>
+                    <p class="product-description">Arreglo premium con 80 rosas en dos colores, corona decorativa y presentación espectacular. Simboliza amor que reina supremo con elegancia natural que conquista desde primer vistazo.</p>
+                    <div class="product-price">$425,000</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Corona%20de%20Pasión%20por%20%24425%2C000.%20%C2%BFPodrías%20darme%20más%20información%3F','corona_de_pasion')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>¿Quieres un Ramo de Rosas Único?</h2>
+            <p>Escríbenos por WhatsApp y diseñamos el ramo de rosas perfecto para ti en Pereira</p>
+            <button class="cta-hero" onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20quiero%20pedir%20un%20ramo%20de%20rosas.%20%C2%BFMe%20ayudan%3F','cta_final_rosas')">
+                💬 Pedir por WhatsApp
+            </button>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="#" onclick="return trackWhatsAppLead('https://wa.me/573207544126','float_rosas')">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.531 3.488"/></svg>
+        </a>
+    </div>
+
+    <!-- Lightbox Script -->
+    <script>
+        function openLightbox(src,name){
+            document.getElementById('lightbox-img').src=src;
+            document.getElementById('lightbox-img').alt=name;
+            document.getElementById('lightbox-caption').textContent=name;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow='hidden';
+        }
+        function closeLightbox(){
+            document.getElementById('lightbox').classList.remove('active');
+            document.getElementById('lightbox-img').src='';
+            document.body.style.overflow='';
+        }
+        document.addEventListener('keydown',function(e){
+            if(e.key==='Escape')closeLightbox();
+        });
+    </script>
+
+</body>
+</html>
