@@ -83,6 +83,37 @@ body {
     color: var(--white);
 }
 
+/* Botón Día de las Madres - Resaltado */
+.nav-mothers-btn {
+    background: linear-gradient(135deg, #ff6b9d 0%, #e8396a 50%, #c0135a 100%);
+    color: #fff !important;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 14px rgba(192, 19, 90, 0.45);
+    animation: pulseMother 1.8s ease-in-out infinite;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.3px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.25s ease;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.nav-mothers-btn:hover {
+    color: #fff !important;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 8px 22px rgba(192, 19, 90, 0.65);
+    background: linear-gradient(135deg, #c0135a 0%, #e8396a 50%, #ff6b9d 100%);
+}
+
+@keyframes pulseMother {
+    0%, 100% { box-shadow: 0 4px 14px rgba(192, 19, 90, 0.45); }
+    50% { box-shadow: 0 4px 22px rgba(255, 107, 157, 0.85), 0 0 0 6px rgba(255, 107, 157, 0.18); }
+}
+
 .hamburger {
     display: none;
     flex-direction: column;

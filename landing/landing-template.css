@@ -228,6 +228,62 @@ body {
     letter-spacing: 0.5px;
 }
 
+/* === Día de las Madres === */
+.mothers-day-card {
+    border: 3px solid #e8396a !important;
+    background: linear-gradient(145deg, #fff0f5 0%, #fff 65%) !important;
+    box-shadow: 0 15px 40px rgba(232, 57, 106, 0.18) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.mothers-day-card:hover {
+    box-shadow: 0 25px 55px rgba(232, 57, 106, 0.28) !important;
+    transform: translateY(-12px) !important;
+}
+
+.mothers-day-card::after {
+    content: '💐 DÍA DE LA MADRE';
+    position: absolute;
+    top: 18px;
+    left: -42px;
+    background: linear-gradient(135deg, #ff6b9d, #c0135a);
+    color: #fff;
+    padding: 5px 50px;
+    font-size: 11px;
+    font-weight: 800;
+    transform: rotate(-45deg);
+    z-index: 5;
+    letter-spacing: 0.6px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+}
+
+.mothers-day-card .product-title {
+    color: #c0135a;
+}
+
+.mothers-day-card .product-price {
+    color: #c0135a;
+    font-weight: 800;
+}
+
+.mothers-day-card .product-button {
+    background: linear-gradient(135deg, #ff6b9d, #c0135a) !important;
+    box-shadow: 0 4px 12px rgba(192, 19, 90, 0.35);
+}
+
+.mothers-day-card .product-button:hover {
+    background: linear-gradient(135deg, #c0135a, #ff6b9d) !important;
+    box-shadow: 0 8px 20px rgba(192, 19, 90, 0.55);
+}
+
+.mothers-badge {
+    background: linear-gradient(135deg, #ff6b9d, #c0135a) !important;
+    color: #fff !important;
+    font-weight: 700;
+}
+
 .product-content {
     padding: 1.8rem;
 }
