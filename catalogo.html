@@ -98,7 +98,9 @@
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.88);
+            background: rgba(20,16,27,0.92);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             z-index: 9999;
             align-items: center;
             justify-content: center;
@@ -112,7 +114,7 @@
             max-width: min(92vw, 580px);
             max-height: 78vh;
             border-radius: 12px;
-            box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+            box-shadow: 0 0 0 1px #C9A86A, 0 8px 40px rgba(0,0,0,0.6);
             object-fit: contain;
             animation: lbFadeIn 0.28s ease;
         }
@@ -121,11 +123,12 @@
             to   { opacity:1; transform: scale(1); }
         }
         #lightbox-caption {
-            color: #fff;
-            font-size: 15px;
-            margin-top: 14px;
-            font-weight: 600;
-            letter-spacing: 0.3px;
+            color: #C9A86A;
+            font-size: 13px;
+            margin-top: 16px;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
             text-align: center;
         }
         #lightbox-close {
