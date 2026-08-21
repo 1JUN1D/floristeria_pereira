@@ -758,8 +758,8 @@ h1, h2, h3, .section-title, .hero-content h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    width: 68px;
+    height: 68px;
     background: var(--wa);
     color: white;
     border-radius: 50%;
@@ -856,7 +856,7 @@ h1, h2, h3, .section-title, .hero-content h1 {
 /* ─── Botón flotante de Instagram (encima del de WhatsApp) ─── */
 .instagram-float {
     position: fixed;
-    bottom: 94px;
+    bottom: 104px;
     right: 22px;
     z-index: 1000;
 }
@@ -865,14 +865,25 @@ h1, h2, h3, .section-title, .hero-content h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    width: 48px;
+    height: 48px;
     background: radial-gradient(circle at 28% 115%, #F2D541 0%, #F24B99 48%, #A429D9 82%);
     color: #F2EED8;
     border-radius: 50%;
     text-decoration: none;
     box-shadow: 0 8px 26px rgba(164, 41, 217, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.whatsapp-float a svg {
+    width: 30px;
+    height: 30px;
+}
+
+.instagram-float a svg {
+    width: 20px;
+    height: 20px;
 }
 
 .instagram-float a:hover {
