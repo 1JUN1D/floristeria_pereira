@@ -677,6 +677,33 @@ body {
     box-shadow: 0 10px 30px rgba(30, 190, 93, 0.5);
 }
 
+/* ─── Botón flotante de Instagram (encima del de WhatsApp) ─── */
+.instagram-float {
+    position: fixed;
+    bottom: 94px;
+    right: 22px;
+    z-index: 1000;
+}
+
+.instagram-float a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle at 28% 115%, #F2D541 0%, #F24B99 48%, #A429D9 82%);
+    color: #F2EED8;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 8px 26px rgba(164, 41, 217, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instagram-float a:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(164, 41, 217, 0.55);
+}
+
 /* Halo sutil — solo transform/opacity */
 .whatsapp-float a::after {
     content: '';

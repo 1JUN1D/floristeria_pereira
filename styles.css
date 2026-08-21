@@ -774,6 +774,112 @@ h1, h2, h3, .section-title, .hero-content h1 {
     box-shadow: 0 10px 30px rgba(30, 190, 93, 0.5);
 }
 
+
+/* ─────────────────────────────────────────────────────────────
+   INSTAGRAM FEED — sección embebida y responsive tras el hero
+   ───────────────────────────────────────────────────────────── */
+.instagram-section {
+    padding: 90px 0;
+    background: var(--warm-white);
+    text-align: center;
+}
+
+.instagram-sub {
+    color: var(--text-soft);
+    margin: 1.4rem 0 2.2rem;
+    font-size: 1rem;
+}
+
+.instagram-sub a {
+    color: var(--primary-deep);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.instagram-sub a:hover {
+    text-decoration: underline;
+}
+
+.instagram-embed-wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    border: 1px solid var(--hairline);
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(32, 5, 51, 0.06);
+}
+
+.instagram-embed-wrap iframe {
+    display: block;
+    width: 100%;
+    height: 540px;
+    border: 0;
+}
+
+.instagram-cta {
+    display: inline-block;
+    margin-top: 2rem;
+    background: linear-gradient(135deg, var(--primary), var(--primary-deep));
+    color: var(--brand-tint);
+    padding: 14px 38px;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 999px;
+    box-shadow: 0 8px 22px rgba(164, 41, 217, 0.32);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instagram-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(164, 41, 217, 0.45);
+}
+
+/* En pantalla ancha el contenido fluye horizontal (grilla del perfil);
+   en móvil la zona se hace vertical y más alta */
+@media (max-width: 768px) {
+    .instagram-section {
+        padding: 70px 0;
+    }
+    .instagram-embed-wrap {
+        border-radius: 12px;
+    }
+    .instagram-embed-wrap iframe {
+        height: 720px;
+    }
+}
+
+/* ─── Botón flotante de Instagram (encima del de WhatsApp) ─── */
+.instagram-float {
+    position: fixed;
+    bottom: 94px;
+    right: 22px;
+    z-index: 1000;
+}
+
+.instagram-float a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle at 28% 115%, #F2D541 0%, #F24B99 48%, #A429D9 82%);
+    color: #F2EED8;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 8px 26px rgba(164, 41, 217, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instagram-float a:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(164, 41, 217, 0.55);
+}
+
 /* ─────────────────────────────────────────────────────────────
    MODAL ESTACIONAL — tono sobrio luxury
    ───────────────────────────────────────────────────────────── */
