@@ -8,7 +8,7 @@
 .dp-flyer{
     position:relative;
     z-index:950;
-    background:linear-gradient(120deg,#14101B 0%,#1f2d4d 55%,#0d6e8c 100%);
+    background:linear-gradient(120deg,#200533 0%,#1f2d4d 55%,#0d6e8c 100%);
     color:#fff;
     font-family:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
     display:flex;
@@ -18,7 +18,7 @@
     flex-wrap:wrap;
     padding:14px 44px 14px 20px;
     text-align:center;
-    border-bottom:2px solid #C9A86A;
+    border-bottom:2px solid #A429D9;
     box-shadow:0 6px 22px rgba(0,0,0,.25);
     animation:dpIn .6s ease both;
 }
@@ -30,19 +30,19 @@
     font-size:clamp(1.02rem,2.6vw,1.5rem);
     font-weight:600;letter-spacing:.01em;
 }
-.dp-flyer__title b{color:#F2CEA2}
+.dp-flyer__title b{color:#F2D541}
 .dp-flyer__sub{
     font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
     color:#9ad7e8;margin-top:3px;font-weight:500;
 }
 .dp-flyer__cta{
-    background:#C9A86A;color:#14101B;text-decoration:none;font-weight:600;
+    background:#A429D9;color:#F2EED8;text-decoration:none;font-weight:600;
     padding:11px 24px;border-radius:999px;
     font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;
     transition:transform .25s ease,background .25s ease,box-shadow .25s ease;
-    box-shadow:0 6px 16px rgba(201,168,106,.35);
+    box-shadow:0 6px 16px rgba(164, 41, 217,.35);
 }
-.dp-flyer__cta:hover{background:#F2CEA2;transform:translateY(-2px)}
+.dp-flyer__cta:hover{background:#F2D541;color:#420B59;transform:translateY(-2px)}
 .dp-flyer__close{
     position:absolute;top:8px;right:12px;
     background:transparent;border:none;color:rgba(255,255,255,.6);
@@ -65,19 +65,19 @@
 }
 .cat-divider::before,.cat-divider::after{
     content:'';flex:1;height:1px;
-    background:linear-gradient(90deg,transparent,#C9A86A,transparent);
+    background:linear-gradient(90deg,transparent,#A429D9,transparent);
 }
 .cat-divider .cat-divider__inner{flex:0 0 auto}
 .cat-divider strong{
     display:block;
     font-family:'Playfair Display',Georgia,serif;
-    font-size:clamp(1.3rem,3vw,1.95rem);font-weight:600;color:#8F6F48;
+    font-size:clamp(1.3rem,3vw,1.95rem);font-weight:600;color:#731FA1;
     white-space:nowrap;letter-spacing:-.01em;
 }
 .cat-divider small{
     display:block;font-family:'Poppins',sans-serif;
     font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
-    color:#6B6375;margin-top:5px;font-weight:500;
+    color:#7A6491;margin-top:5px;font-weight:500;
 }
 
 /* ---------- Orden: empujar secciones especiales al fondo ----------
@@ -90,18 +90,18 @@
 /* ---------- Badges especiales ---------- */
 .category-badge.badge-padre{
     background:linear-gradient(135deg,#1f2d4d,#0d6e8c)!important;
-    color:#F2CEA2!important;border-color:rgba(201,168,106,.6)!important;
+    color:#F2D541!important;border-color:rgba(164, 41, 217,.6)!important;
 }
 .category-badge.badge-canasta{
-    background:linear-gradient(135deg,#8F6F48,#5c4622)!important;
-    color:#F2CEA2!important;
+    background:linear-gradient(135deg,#731FA1,#420B59)!important;
+    color:#F2D541!important;
 }
 
 /* ---------- Botón de filtro Día del Padre destacado ---------- */
-.filter-btn[data-category="padre"]{border-color:#C9A86A;color:#8F6F48}
+.filter-btn[data-category="padre"]{border-color:#A429D9;color:#731FA1}
 .filter-btn[data-category="padre"].active{
     background:linear-gradient(135deg,#1f2d4d,#0d6e8c)!important;
-    color:#F2CEA2!important;box-shadow:0 0 0 1px #C9A86A,0 6px 18px rgba(13,110,140,.3)!important;
+    color:#F2D541!important;box-shadow:0 0 0 1px #A429D9,0 6px 18px rgba(13,110,140,.3)!important;
 }
 
 /* ---------- Vigencia: ocultar todo lo del Día del Padre fuera de fecha ---------- */

@@ -1,8 +1,8 @@
 /*
  * SanJose Florería — Pereira
  * REDISEÑO "LUXURY FLORAL" · solo estilo (estructura intacta)
- * Color de marca conservado: Primary #BF9460 (dorado cálido)
- * Variante profunda generada: --primary-deep #8F6F48 (~25% más oscura)
+ * Paleta de marca 2026: #F24B99 · #420B59 · #A429D9 · #F2D541 · #F2EED8
+ * Variante profunda: --primary-deep #731FA1
  */
 
 /* Reset and Base Styles */
@@ -13,31 +13,31 @@
 }
 
 :root {
-    /* —— Color de marca existente (NO se cambia) —— */
-    --primary: #BF9460;
-    --secondary: #F2CEA2;
-    --accent: #8C5F37;
-    --highlight: #F2C9C9;
-    --background: #F2F2F2;
+    /* —— Colores de marca (paleta 2026) —— */
+    --primary: #A429D9;
+    --secondary: #F2D541;
+    --accent: #420B59;
+    --highlight: #FAD0E5;
+    --background: #F2EED8;
     --text-dark: #333;
     --text-light: #555;
     --white: #fff;
 
     /* —— Variante profunda del color de marca (precios / hovers) —— */
-    --primary-deep: #8F6F48;
+    --primary-deep: #731FA1;
 
     /* —— Sistema Luxury Floral —— */
-    --ink: #14101B;
-    --ink-2: #221B2E;
+    --ink: #200533;
+    --ink-2: #2E0B45;
     --warm-white: #FDFCFB;
-    --cream: #F8F5F0;
-    --brand-tint: #F6EFE2;        /* tinte pastel muy suave del dorado */
-    --gold: #C9A86A;
-    --gold-dark: #A8853F;
-    --gold-soft: rgba(201, 168, 106, 0.22);
-    --text: #2B2433;
-    --text-soft: #6B6375;
-    --hairline: rgba(22, 18, 28, 0.09);
+    --cream: #F8F5EC;
+    --brand-tint: #F2EED8;        /* tinte pastel muy suave (crema de marca) */
+    --gold: #A429D9;
+    --gold-dark: #420B59;
+    --gold-soft: rgba(164, 41, 217, 0.22);
+    --text: #38104F;
+    --text-soft: #7A6491;
+    --hairline: rgba(34, 6, 53, 0.09);
     --wa: #1EBE5D;
     --wa-dark: #169549;
 
@@ -77,7 +77,7 @@ h1, h2, h3, .section-title, .hero-content h1 {
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--hairline);
-    box-shadow: 0 1px 0 rgba(201, 168, 106, 0.25);
+    box-shadow: 0 1px 0 rgba(164, 41, 217, 0.25);
     z-index: 1000;
     padding: 0.9rem 0;
     transition: background 0.3s ease;
@@ -93,11 +93,10 @@ h1, h2, h3, .section-title, .hero-content h1 {
 }
 
 .nav-logo img {
-    height: 44px;
+    height: 46px;
     width: auto;
-    padding: 4px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 1px var(--gold), 0 4px 14px rgba(20, 16, 27, 0.08);
+    padding: 2px 0;
+    display: block;
 }
 
 .nav-menu {
@@ -142,16 +141,16 @@ h1, h2, h3, .section-title, .hero-content h1 {
 /* Botón estacional (tono luxury, sin parpadeo) */
 .nav-mothers-btn {
     background: linear-gradient(135deg, var(--primary), var(--primary-deep));
-    color: #fff !important;
+    color: var(--brand-tint) !important;
     padding: 9px 20px;
     border-radius: 999px;
     font-weight: 600 !important;
-    box-shadow: 0 4px 16px rgba(143, 111, 72, 0.28);
+    box-shadow: 0 4px 16px rgba(115, 31, 161, 0.28);
     display: inline-flex;
     align-items: center;
     gap: 6px;
     letter-spacing: 0.18em;
-    border: 1px solid rgba(201, 168, 106, 0.6);
+    border: 1px solid rgba(164, 41, 217, 0.6);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     text-transform: uppercase;
     font-size: 12px;
@@ -162,7 +161,7 @@ h1, h2, h3, .section-title, .hero-content h1 {
 .nav-mothers-btn:hover {
     color: #fff !important;
     transform: translateY(-2px);
-    box-shadow: 0 8px 22px rgba(143, 111, 72, 0.4);
+    box-shadow: 0 8px 22px rgba(115, 31, 161, 0.4);
 }
 
 .hamburger {
@@ -207,8 +206,8 @@ h1, h2, h3, .section-title, .hero-content h1 {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(to top, rgba(20, 16, 27, 0.7) 0%, rgba(20, 16, 27, 0.2) 45%, rgba(20, 16, 27, 0.45) 100%),
-        radial-gradient(80% 70% at 50% 60%, transparent 40%, rgba(20, 16, 27, 0.35) 100%);
+        linear-gradient(to top, rgba(32, 5, 51, 0.7) 0%, rgba(32, 5, 51, 0.2) 45%, rgba(32, 5, 51, 0.45) 100%),
+        radial-gradient(80% 70% at 50% 60%, transparent 40%, rgba(32, 5, 51, 0.35) 100%);
     z-index: 1;
 }
 
@@ -229,7 +228,7 @@ h1, h2, h3, .section-title, .hero-content h1 {
     height: 1px;
     background: var(--gold);
     margin: 0 auto 1.6rem;
-    box-shadow: 0 0 12px rgba(201, 168, 106, 0.7);
+    box-shadow: 0 0 12px rgba(164, 41, 217, 0.7);
 }
 
 .hero-content h1 {
@@ -336,15 +335,15 @@ h1, h2, h3, .section-title, .hero-content h1 {
 .product-badge {
     order: 3;
     align-self: center;
-    background: rgba(20, 16, 27, 0.9);
-    color: var(--gold);
+    background: rgba(32, 5, 51, 0.9);
+    color: var(--brand-tint);
     padding: 6px 16px;
     border-radius: 999px;
     font-size: 10px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.22em;
-    border: 1px solid rgba(201, 168, 106, 0.5);
+    border: 1px solid rgba(164, 41, 217, 0.5);
 }
 
 .cards-grid {
@@ -360,7 +359,7 @@ h1, h2, h3, .section-title, .hero-content h1 {
     border-radius: 200px 200px 18px 18px;
     overflow: hidden;
     padding: 12px 12px 16px;
-    box-shadow: 0 18px 50px rgba(20, 16, 27, 0.07);
+    box-shadow: 0 18px 50px rgba(32, 5, 51, 0.07);
     transition: transform 0.45s ease, box-shadow 0.45s ease;
     position: relative;
     display: flex;
@@ -377,7 +376,7 @@ h1, h2, h3, .section-title, .hero-content h1 {
 
 .product-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(20, 16, 27, 0.12);
+    box-shadow: 0 30px 60px rgba(32, 5, 51, 0.12);
 }
 
 .product-card img {
@@ -385,7 +384,7 @@ h1, h2, h3, .section-title, .hero-content h1 {
     height: 300px;
     object-fit: cover;
     border-radius: 190px 190px 14px 14px;
-    box-shadow: 0 0 0 1px rgba(201, 168, 106, 0.55);
+    box-shadow: 0 0 0 1px rgba(164, 41, 217, 0.55);
 }
 
 .card-content {
@@ -467,7 +466,7 @@ h1, h2, h3, .section-title, .hero-content h1 {
     overflow: hidden;
     border-radius: 16px;
     aspect-ratio: 1;
-    box-shadow: 0 0 0 1px rgba(201, 168, 106, 0.35);
+    box-shadow: 0 0 0 1px rgba(164, 41, 217, 0.35);
 }
 
 .photo-item img {
@@ -566,7 +565,7 @@ h1, h2, h3, .section-title, .hero-content h1 {
     height: 440px;
     object-fit: cover;
     border-radius: 260px 260px 20px 20px;
-    box-shadow: 0 0 0 1px rgba(201, 168, 106, 0.6), 0 22px 50px rgba(20, 16, 27, 0.14);
+    box-shadow: 0 0 0 1px rgba(164, 41, 217, 0.6), 0 22px 50px rgba(32, 5, 51, 0.14);
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -598,14 +597,14 @@ h1, h2, h3, .section-title, .hero-content h1 {
     padding: 2rem;
     border: 1px solid var(--hairline);
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(20, 16, 27, 0.05);
+    box-shadow: 0 10px 30px rgba(32, 5, 51, 0.05);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
     text-align: center;
 }
 
 .area-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 16px 38px rgba(20, 16, 27, 0.1);
+    box-shadow: 0 16px 38px rgba(32, 5, 51, 0.1);
 }
 
 .area-icon {
@@ -644,7 +643,7 @@ h1, h2, h3, .section-title, .hero-content h1 {
     background: var(--warm-white);
     border: 1px solid var(--hairline);
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(20, 16, 27, 0.05);
+    box-shadow: 0 10px 30px rgba(32, 5, 51, 0.05);
 }
 
 .areas-cta p {
@@ -655,7 +654,7 @@ h1, h2, h3, .section-title, .hero-content h1 {
 
 .area-btn {
     background: linear-gradient(135deg, var(--primary), var(--primary-deep));
-    color: #fff;
+    color: var(--brand-tint);
     border: none;
     padding: 15px 38px;
     font-family: var(--font-body);
@@ -670,7 +669,7 @@ h1, h2, h3, .section-title, .hero-content h1 {
 
 .area-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(143, 111, 72, 0.32);
+    box-shadow: 0 12px 30px rgba(115, 31, 161, 0.32);
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -684,7 +683,7 @@ h1, h2, h3, .section-title, .hero-content h1 {
 .map-container {
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 0 0 1px var(--gold), 0 18px 44px rgba(20, 16, 27, 0.1);
+    box-shadow: 0 0 0 1px var(--gold), 0 18px 44px rgba(32, 5, 51, 0.1);
 }
 
 .map-container iframe {
@@ -701,7 +700,7 @@ h1, h2, h3, .section-title, .hero-content h1 {
     background: var(--ink);
     padding: 56px 0;
     text-align: center;
-    border-top: 1px solid rgba(201, 168, 106, 0.25);
+    border-top: 1px solid rgba(164, 41, 217, 0.25);
 }
 
 .footer-content {
@@ -729,13 +728,13 @@ h1, h2, h3, .section-title, .hero-content h1 {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: rgba(201, 168, 106, 0.08);
-    box-shadow: 0 0 0 1px rgba(201, 168, 106, 0.3);
+    background: rgba(164, 41, 217, 0.08);
+    box-shadow: 0 0 0 1px rgba(164, 41, 217, 0.3);
 }
 
 .instagram-icon:hover {
     color: var(--warm-white);
-    background: rgba(201, 168, 106, 0.18);
+    background: rgba(164, 41, 217, 0.18);
     transform: translateY(-2px);
 }
 
@@ -797,7 +796,7 @@ h1, h2, h3, .section-title, .hero-content h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(20, 16, 27, 0.86);
+    background: rgba(32, 5, 51, 0.86);
     backdrop-filter: blur(8px);
 }
 
@@ -809,7 +808,7 @@ h1, h2, h3, .section-title, .hero-content h1 {
     max-width: 500px;
     width: 90%;
     text-align: center;
-    box-shadow: 0 30px 70px rgba(20, 16, 27, 0.5);
+    box-shadow: 0 30px 70px rgba(32, 5, 51, 0.5);
     animation: slideUp 0.6s ease-out;
     border: 1px solid var(--gold);
 }
@@ -832,7 +831,7 @@ h1, h2, h3, .section-title, .hero-content h1 {
 .valentine-btn {
     display: inline-block;
     background: linear-gradient(135deg, var(--primary), var(--primary-deep));
-    color: #fff;
+    color: var(--brand-tint);
     padding: 15px 42px;
     font-family: var(--font-body);
     font-size: 0.85rem;
@@ -842,12 +841,12 @@ h1, h2, h3, .section-title, .hero-content h1 {
     border-radius: 999px;
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 8px 22px rgba(143, 111, 72, 0.3);
+    box-shadow: 0 8px 22px rgba(115, 31, 161, 0.3);
 }
 
 .valentine-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(143, 111, 72, 0.42);
+    box-shadow: 0 12px 30px rgba(115, 31, 161, 0.42);
 }
 
 /* Corazones flotantes — solo transform/opacity */
@@ -914,15 +913,15 @@ h1, h2, h3, .section-title, .hero-content h1 {
 /* Botón secundario = "Ver Catálogo" (oro champán, sin corazones) */
 .catalog-btn {
     background: linear-gradient(135deg, var(--gold), var(--gold-dark)) !important;
-    color: var(--ink) !important;
+    color: var(--brand-tint) !important;
     border: none !important;
-    box-shadow: 0 10px 26px rgba(168, 133, 63, 0.42) !important;
+    box-shadow: 0 10px 26px rgba(66, 11, 89, 0.42) !important;
 }
 
 .catalog-btn:hover {
     background: linear-gradient(135deg, var(--gold-dark), var(--gold)) !important;
     transform: translateY(-3px);
-    box-shadow: 0 14px 34px rgba(168, 133, 63, 0.52) !important;
+    box-shadow: 0 14px 34px rgba(66, 11, 89, 0.52) !important;
 }
 
 /* Ocultar los emojis 💖 sin tocar el HTML */
